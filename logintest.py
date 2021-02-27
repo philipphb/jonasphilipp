@@ -35,5 +35,5 @@ while True:
                     while(index<len(password)):
                         sonderzeichentrue = password[index] in passwordlist
                         if(sonderzeichentrue == "True"):
-
+#das macht keinen sinn philipp das hier zu breaken
 

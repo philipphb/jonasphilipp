@@ -37,3 +37,4 @@ while True:
                         if(sonderzeichentrue == "True"):
 #das macht keinen sinn philipp das hier zu breaken
 #okay verstehe
+#alles klar

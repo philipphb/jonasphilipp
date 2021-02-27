@@ -35,4 +35,4 @@ while True:
                     while(index<len(password)):
                         sonderzeichentrue = password[index] in passwordlist
                         if(sonderzeichentrue == "True"):
-#nice
+#nicemegaoder

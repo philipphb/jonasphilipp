@@ -33,6 +33,20 @@ while True:
                         index+=1
 
                     while(index<len(password)):
-                        sonderzeichentrue = password[index] in passwordlist
+                        global sonderzeichentrue = password[index] in sonderzeichen
                         if(sonderzeichentrue == "True"):
-#nicemegaoder
+                            #global sonderzeichentrue
+                            print("Sonderzeichen ist enthalten")
+                        index+=1
+                    while(index < len(password)):
+                        global zahlentrue = password[index] in zahlen
+                        if (zahlentrue == "True"):
+                            #global zahlentrue
+                            print("Eine Zahl ist enthalten")
+                        index += 1
+                    if(len(password)>7):
+                        if(sonderzeichentrue == "True"):
+                            if(zahlentrue == "True"):
+                                print("Das Passwort ist okay")
+                                break
+

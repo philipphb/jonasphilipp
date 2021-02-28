@@ -1,9 +1,6 @@
 import math
-#from pathlib import Path
-#import webbrowser
-#from fpdf import FPDF
 from tkinter import *
-#from PIL import Image
+#import extcolors
 def rgbtohex(r,g,b):
     return f'#{r:02x}{g:02x}{b:02x}'
 decend = input("Wollen Sie Text Entschlüsseln (e) oder Verschlüsseln (d)?: ")
@@ -123,7 +120,7 @@ if(decend == "e"):
     #filename = input("Wie lautet der Dateipfad der Pyramid Scan Datei?: ")
     filename = "/Users/philippbecker/Documents/Programmieren/Python/CSC/tesla.png"
     print(filename)
-
+#test
 
 
 

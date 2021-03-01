@@ -33,13 +33,15 @@ while True:
                         index+=1
 
                     while(index<len(password)):
-                        global sonderzeichentrue = password[index] in sonderzeichen
+                        global sonderzeichentrue
+                        sonderzeichentrue = password[index] in sonderzeichen
                         if(sonderzeichentrue == "True"):
                             #global sonderzeichentrue
                             print("Sonderzeichen ist enthalten")
                         index+=1
                     while(index < len(password)):
-                        global zahlentrue = password[index] in zahlen
+                        global zahlentrue
+                        zahlentrue = password[index] in zahlen
                         if (zahlentrue == "True"):
                             #global zahlentrue
                             print("Eine Zahl ist enthalten")

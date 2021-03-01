@@ -49,6 +49,4 @@ while True:
                     if(len(password)>7):
                         if(sonderzeichentrue == "True"):
                             if(zahlentrue == "True"):
-                                print("Das Passwort ist okay")
-                                break
-
+#danke jonas das war der brüller

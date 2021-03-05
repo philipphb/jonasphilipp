@@ -1,48 +1,29 @@
 from termcolor import cprint
+from math import  *
+
 primzahllist = []
 maxzahllist = []
-colorlist = []
 while True:
-    #maxzahl1 = input("Bis zu welcher Zahl soll eine Primzahl berechnet werden?: ")
-    maxzahl1 = 100
-    maxzahl1 = int(maxzahl1)
-    maxzahl = int(maxzahl1+1)
-    if(maxzahl1>0):
+    cprint("Ihre Eingabe muss größer >=2 sein und darf keine Kommastellen enthalten.",'yellow')
+    cprint("Wenn Ihre Eingabe doch eine Kommazahl ist, dann wird diese Zahl automatisch gerundet.",'yellow')
+    maxzahl = input("Bis zu welcher Zahl soll eine Primzahl berechnet werden?: ")
+    maxzahl = float(maxzahl)
+    maxzahl = round(maxzahl)
+    if(maxzahl>=2):
         print("Die Eingabe war gültig.")
         print("Berechnung wird gestartet")
         break
-    if(maxzahl<=0):
+    else:
         print("Die Zahl muss größer 1 sein. Ungültige Eingabe.")
 
-indexcolor = 0
-while(indexcolor<maxzahl):
-    colorlist.append('red',)
-    cprint('red','red')
-    colorlist.append('green')
-    cprint('green','green')
-    indexcolor+=1
 
 
 
-indexmax = 1
-while(indexmax<maxzahl):
-    maxzahllist.append(indexmax)
-    cprint(indexmax,colorlist[indexmax])
-    indexmax+=1
+print(eratosthenes(100))
 
-
-indexgesamt = 0
-while(indexgesamt<maxzahl):
-    indexeinzel = 0
-    while(indexeinzel<maxzahl):
-        cprint(indexeinzel,colorlist[indexeinzel])
-        if((indexeinzel/maxzahllist[indexeinzel])==1):
-            primzahllist.append(indexeinzel)
-        indexeinzel+=1
-    indexgesamt+=1
-
-
+cprint("Done!",'green')
 cprint(primzahllist,'yellow')
+primzahllist = str(primzahllist)
 text_file = open("/Users/philippbecker/Desktop/primzahlist.txt", "w")
 text_file.write(primzahllist)
 text_file.close()

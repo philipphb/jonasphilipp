@@ -24,7 +24,7 @@ for zahelnreihe in range(2,maxzahl):
 index = 0
 while(index<maxzahl):
 
-    if(index%==0):
+    if(maxzahllist[index]%zahl==0):
         primzahllist.append(index)
 
 

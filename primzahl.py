@@ -17,9 +17,24 @@ while True:
         print("Die Zahl muss größer 1 sein. Ungültige Eingabe.")
 
 
+for zahelnreihe in range(2,maxzahl):
+    maxzahllist.append(zahelnreihe)
+    print(zahelnreihe)
+
+index = 0
+while(index<maxzahl):
+
+    if(index%==0):
+        primzahllist.append(index)
 
 
-print(eratosthenes(100))
+
+
+    index+=1
+
+
+
+
 
 cprint("Done!",'green')
 cprint(primzahllist,'yellow')

@@ -1,8 +1,8 @@
 from termcolor import cprint
-from math import  *
 
 primzahllist = []
 maxzahllist = []
+vielfachlist = []
 while True:
     cprint("Ihre Eingabe muss größer >=2 sein und darf keine Kommastellen enthalten.",'yellow')
     cprint("Wenn Ihre Eingabe doch eine Kommazahl ist, dann wird diese Zahl automatisch gerundet.",'yellow')
@@ -17,20 +17,22 @@ while True:
         print("Die Zahl muss größer 1 sein. Ungültige Eingabe.")
 
 
-for zahelnreihe in range(2,maxzahl):
+for zahelnreihe in range(2,maxzahl+1):
     maxzahllist.append(zahelnreihe)
-    print(zahelnreihe)
+    cprint(("Liste wird gefüllt mit Werten ... momentan bei zahlenreihe =",zahelnreihe),'yellow')
+cprint(("maxzahllist wurde mit insgesamt "+str(maxzahl)+" Werten gefüllt."),'green')
+
 
 index = 0
 while(index<maxzahl):
+    primzahllist.append(maxzahllist[index])
+    zahl = int(maxzahllist[index])
+    while True:
+        for x in range(2,maxzahl):
+            if(x%zahl==0 in maxzahllist):
 
-    if(maxzahllist[index]%zahl==0):
-        primzahllist.append(index)
 
 
-
-
-    index+=1
 
 
 

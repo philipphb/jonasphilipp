@@ -20,27 +20,33 @@ while True:
 for zahelnreihe in range(2,maxzahl+1):
     maxzahllist.append(zahelnreihe)
     cprint(("Liste wird gefüllt mit Werten ... momentan bei zahlenreihe =",zahelnreihe),'yellow')
-cprint(("maxzahllist wurde mit insgesamt "+str(maxzahl)+" Werten gefüllt."),'green')
+cprint(("maxzahllist wurde mit insgesamt "+str(len(maxzahllist))+" Werten gefüllt."),'green')
 
 
 index = 0
-while(index<maxzahl):
-    primzahllist.append(maxzahllist[index])
-    zahl = int(maxzahllist[index])
-    while True:
-        for x in range(2,maxzahl):
-            if(x%zahl==0 in maxzahllist):
+while(index<len(maxzahllist)):
+    primzahllist.append(maxzahllist[0])
+    zahl = int(maxzahllist[0])
+    cprint(("Der Löscungsprozess ist momentan bei index: "+str(index)),'green')
+    cprint(("Primzahl: "+str(zahl)),'red')
+    print("Done")
+    for loeschen in range(2,len(maxzahllist)):
+        cprint(("for loeschen ist bei: "+str(loeschen)),'green')
+        if(loeschen%zahl==0):
+            item = maxzahllist.index(loeschen)
+            maxzahllist.remove(loeschen)
+            cprint(("Die if Löschung is bei: "+str(loeschen)),'green')
+    index+=1
 
 
-
-
-
+print("max"+maxzahllist)
+print("prim"+primzahllist)
 
 
 
 cprint("Done!",'green')
 cprint(primzahllist,'yellow')
-primzahllist = str(primzahllist)
+primzahllist = str(maxzahllist)
 text_file = open("/Users/philippbecker/Desktop/primzahlist.txt", "w")
 text_file.write(primzahllist)
 text_file.close()

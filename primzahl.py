@@ -19,28 +19,31 @@ while True:
 
 for zahelnreihe in range(2,maxzahl+1):
     maxzahllist.append(zahelnreihe)
-    cprint(("Liste wird gefüllt mit Werten ... momentan bei zahlenreihe =",zahelnreihe),'yellow')
+    #cprint(("Liste wird gefüllt mit Werten ... momentan bei zahlenreihe =",zahelnreihe),'yellow')
 cprint(("maxzahllist wurde mit insgesamt "+str(len(maxzahllist))+" Werten gefüllt."),'green')
 
 
+print(maxzahllist)
+
 index = 0
 while(index<len(maxzahllist)):
+    print(maxzahllist)
     primzahllist.append(maxzahllist[0])
     zahl = int(maxzahllist[0])
     cprint(("Der Löscungsprozess ist momentan bei index: "+str(index)),'green')
     cprint(("Primzahl: "+str(zahl)),'red')
     print("Done")
-    for loeschen in range(2,len(maxzahllist)):
+    for loeschen in range(zahl,len(maxzahllist)+2):
         cprint(("for loeschen ist bei: "+str(loeschen)),'green')
         if(loeschen%zahl==0):
-            item = maxzahllist.index(loeschen)
+            #item = maxzahllist.index(loeschen)
             maxzahllist.remove(loeschen)
-            cprint(("Die if Löschung is bei: "+str(loeschen)),'green')
+            cprint(("Die if Löschung is bei: "+str(loeschen)),'yellow')
     index+=1
 
 
-print("max"+maxzahllist)
-print("prim"+primzahllist)
+print("max"+str(maxzahllist))
+print("prim"+str(primzahllist))
 
 
 

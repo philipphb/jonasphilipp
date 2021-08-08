@@ -1,0 +1,14 @@
+
+
+otp = "1010101111001010001001001001111010101101010100101001010010101111110101010101100101010101"
+link = "1100100110001000010111101100111110011100000010111111011111101110100100100110100001101101"
+
+fertig = ""
+index = 0
+while index<len(otp):
+    if int(otp[index]) == int(link[index]):
+        fertig+="0"
+    if int(otp[index])!= int(link[index]):
+        fertig+="1"
+    index+=1
+print(fertig)

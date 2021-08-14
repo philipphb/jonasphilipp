@@ -107,7 +107,7 @@ try:
     time.sleep(2)
     collectDiamonds()
 finally:
-    time.sleep(360)
+    time.sleep(10)
     driver.quit()
     
 
